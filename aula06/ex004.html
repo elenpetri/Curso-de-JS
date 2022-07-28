@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #eda8a88e;
+        }
+
+        .info_nome {
+            color: white;
+            font: normal 20pt Arial;
+            margin: auto;
+            align-items: center;
+            text-align: center;
+
+        }
+
+        .borda {
+            width: 50%;
+            border: 1px solid #5d2e2e;
+            box-shadow: 10px 20px #5d2e2e4d;
+            border-radius: 15px;
+            background-color: #EDA8A8;
+        }
+
+        strong {
+            color: #5d2e2e;
+        }
+    </style>
+</head>
+<body>
+    <div class="info_nome borda">
+        <script>
+            var nome = window.prompt('Qual é o seu nome?')
+            document.write(`Olá, <strong>${nome}</strong>! Seu nome tem ${nome.length} letras. <br/>`)
+            document.write(`Seu nome em maiúsculas é: ${nome.toUpperCase()} <br/>`)
+            document.write(`Seu nome em minúsculas é: ${nome.toLowerCase()}`)
+        </script>
+    </div>
+</body>
+</html>
