@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background: #5d7599;
+            text-align: center;
+        }
+        h1 {
+            font: bold 20pt Arial;
+            color: #dadada;
+        }
+        input{
+            font: normal 14pt Arial;
+            background: #dadada;
+            color: #40536f;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 1px 2px #40536f;
+        }
+        .button {
+            color: #40536f;
+            border: 1px solid #40536f;
+            box-shadow: 1px 2px #40536f;
+        }
+        p{
+            font: normal 14pt Arial;
+            color: #dadada;
+        }
+        strong{
+            color: #f7f0c6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Em qual país você vive?</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input class="button" type="button" value="Verificar Nacionalidade" onclick="verificar()">
+    <div id="nacionalidade">
+
+    </div>
+    <script>
+        function verificar() {
+        var pais = window.document.getElementById('txtpais').value
+        var nacionalidade = window.document.getElementById('nacionalidade')
+        nacionalidade.innerHTML = `<p>Vivendo em <strong>${pais}</strong>.</p>`
+        if (pais == 'Brasil') {
+            nacionalidade.innerHTML += `<p>Você é <strong>BRASILEIRO</strong>!</p>`
+        }
+        else {
+            nacionalidade.innerHTML += `<p>Você é <strong>ESTRANGEIRO</strong>!</p>`  
+        }
+    }
+    </script>
+    
+</body>
+</html>
